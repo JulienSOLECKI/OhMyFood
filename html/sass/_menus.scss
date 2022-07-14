@@ -103,7 +103,10 @@
                 }
 
               
-                &:hover .menus__details__slide{
+                &:hover .menus__details__slide,
+                &:focus .menus__details__slide,
+                &:active .menus__details__slide{
+                    
                    display: grid;
                    place-items: center;
                     background-color: $Tertiaire;
