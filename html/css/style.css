@@ -74,7 +74,7 @@
   position: relative;
   color: #363636;
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -300,8 +300,8 @@
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 195px;
-  padding: 15px;
+  margin-left: 25px;
+  padding: 10px;
 }
 .starter .menus__details-1:hover .menus__details__slide,
 .starter .menus__details-2:hover .menus__details__slide,
