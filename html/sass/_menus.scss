@@ -53,6 +53,7 @@
                 font-weight: 900;
             }
         }
+        
     }
     
     .starter,
@@ -71,6 +72,7 @@
                 font-size: 18px;
                 font-weight: 200;
                 margin-bottom: 5px;
+                text-transform: uppercase;
             }
             .underline {
                 background-color: $Tertiaire;
@@ -184,4 +186,25 @@
                 opacity: 1;
             }
         }
+    }
+
+    .btn__commande{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #f6f6f6;
+        
+     button{
+        background: linear-gradient($Secondaire, $Primaire);
+                border: none;
+                border-radius: 30px;
+                padding: 15px 50px ;
+                margin-bottom: 20px;
+                box-shadow: 0 0 6px #7A7A7A;
+                font-size: 15px;
+                font-weight: 500;
+                color: white;
+                cursor: pointer;
+            }
     }
