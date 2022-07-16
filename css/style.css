@@ -13,6 +13,59 @@ main {
   flex-direction: column;
 }
 
+.loader_container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fff;
+  opacity: 0.9;
+  height: 100vh;
+  z-index: 1;
+  animation: loader 0.1s 3s forwards;
+  transform-origin: top;
+}
+.loader_container .loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear infinite;
+}
+.loader_container .loader::before, .loader_container .loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+.loader_container .loader::before {
+  inset: 10px;
+  border-top-color: #FF79DA;
+  animation: spin 3s linear infinite;
+}
+.loader_container .loader::after {
+  inset: 25px;
+  border-top-color: #99E2D0;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  to {
+    transform: scale(0);
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -80,6 +133,11 @@ header .explorer .explorer__reservation a button {
   font-weight: 500;
   color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+header .explorer .explorer__reservation a button:hover {
+  background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  box-shadow: 2px 2px 6px #3a3a3a;
 }
 
 main .functioning {
@@ -211,6 +269,37 @@ main #restaurants .list__restaurants a figure figcaption .Card__restaurants__lik
   font-size: 25px;
   width: 15%;
   margin-left: -10%;
+  position: relative;
+}
+main #restaurants .list__restaurants a figure figcaption .Card__restaurants__like:hover .heart-full {
+  transform: scale(0.92);
+  opacity: 1;
+}
+main #restaurants .list__restaurants a figure figcaption .Card__restaurants__like:hover .heart {
+  color: transparent;
+  transition: 1.5s ease;
+}
+main #restaurants .list__restaurants a figure figcaption .Card__restaurants__like .heart {
+  position: relative;
+  color: #363636;
+  font-weight: 400;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 20px;
+}
+main #restaurants .list__restaurants a figure figcaption .Card__restaurants__like .heart-full {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: 0.5s ease;
+  font-weight: 900;
 }
 
 footer .footer__container {
