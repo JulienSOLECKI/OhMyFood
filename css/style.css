@@ -198,6 +198,7 @@ main #restaurants h2 {
 main #restaurants .list__restaurants {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   padding: 20px 10px;
 }
@@ -251,6 +252,7 @@ main #restaurants .list__restaurants a figure figcaption .Card__restaurants__nam
   margin-left: 15px;
   height: 100%;
   width: 85%;
+  padding: 12px;
 }
 main #restaurants .list__restaurants a figure figcaption .Card__restaurants__name h3 {
   font-size: 16px;
@@ -260,7 +262,7 @@ main #restaurants .list__restaurants a figure figcaption .Card__restaurants__nam
 main #restaurants .list__restaurants a figure figcaption .Card__restaurants__name p {
   font-size: 16px;
   height: 50%;
-  margin: 0;
+  margin-bottom: 25px;
 }
 main #restaurants .list__restaurants a figure figcaption .Card__restaurants__like {
   display: flex;
@@ -335,6 +337,38 @@ footer .footer__container .footer__container__link .link__logo-2 a {
 }
 footer .footer__container .footer__container__link .footer__logo {
   margin-right: 5px;
+}
+
+@media only screen and (min-width: 1445px) {
+  main .functioning h2, main #restaurants h2 {
+    text-align: center;
+  }
+  main .functioning ol {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  main .list__restaurants {
+    flex-direction: row;
+    gap: 25px;
+  }
+  main .list__restaurants a {
+    color: black;
+    display: flex;
+    width: 95%;
+    max-width: 600px;
+    height: 16em;
+  }
+  main .Card__restaurants .Card__restaurants__name h3 {
+    font-size: 16px;
+    height: 30%;
+  }
+  main .Card__restaurants .Card__restaurants__name p {
+    height: 80%;
+  }
+  main .Card__restaurants .list__restaurants__new {
+    left: 85% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
